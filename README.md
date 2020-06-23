@@ -1,5 +1,9 @@
 #UI_UX_teamproject
-# UI_UX_teamproject
-# UI_UX_teamproject
-# UI_UX_teamproject
-#teamproject
+비뚜루
+
+
+아이스크림 키오스크 개발
+
+팀장: 원윤경
+팀원: 김혜림,남영준,박현정,양미선(ㄱㄴ순)
+기간: 2020.06.22 ~ 26
