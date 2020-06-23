@@ -1,0 +1,110 @@
+
+<!-- * 페이지와 관련된 함수
+: 버튼을 만들어 클릭 시(onclick) 다양한 페이지로 이동할 수 있도록 만든 함수
+
+history.back() : 이전 페이지로 돌아가는 함수
+
+location.reload() : 현재 페이지를 refresh
+
+history.forward() :  페이지 앞으로 가기 (갔던 페이지 없을 경우 변화 없음)  -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex/title>
+</head>
+<body>
+	
+
+	* 링크로 이동가능한 태그
+	<a href="링크">
+	<form> ==> submit
+	* 자바스크립트에서 링크 이동하기
+ -->
+<!-- <h1>main</h1>
+
+<a href="index2.html">index2.html로 이동</a> 
+
+<script type="text/javascript">
+// 자바스크립트에서 배경 컬러바꾸기
+document.bgColor = "#ff0000"; -->
+
+
+<!-- </script>
+
+</body>
+</html>  -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex</title>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    #container{
+        /* width 360px, height 600px */
+        width:200px;
+        height:300px;
+        text-align:center;
+        position:relative;
+    }
+    img{
+        /* width:50%; */
+        margin:50%;
+    }
+    button{
+        width:20%;
+        height:5%;
+        /* margin: 0 180px; */
+        position: absolute;
+        left:50%;
+    }
+</style>
+    <script type="text/javascript" src="menu_popup.js">
+    </script> 
+    
+    <script type="text/javascript">
+ 
+    function gopage() {
+        // 자바스크립트로 링크 이동하기 : location.href
+        location.href = "index2.html";
+        // form에서는 페이지 이동 전에 데이터가 들어있는지 확인이 번거롭다.
+        // 데이터를 확인하고 그 데이터를 가지고 링크를 이동하기 위해서는 
+        // 자바스크립트에서 데이터 확인을 거치고 직접 보내주는 것이 좋다
+        
+        
+    }
+    </script>
+</head>
+<!-- <body bgcolor="#00ff00"> -->
+<!-- <h2>여기는 index2.html입니다.</h2> -->
+
+
+<!-- history.back() : 이전 페이지로 돌아가는 함수 -->
+<!-- <input type="button" value="이전으로 돌아가기" onclick="history.back()"> -->
+
+<!-- location.reload() : 현재 페이지를 refresh -->
+<!-- <input type="button" value="현재 페이지를 갱신" onclick="location.reload()"> -->
+
+<!-- history.forward() : 페이지 앞으로 가기(갔던 페이지 없을 경우 변화없음) -->
+<!-- <input type="button" value="진행" onclick="history.forward()"> -->
+
+<div id="container">
+<img src="icon1.png"><br>
+<button type="button" onclick="gopage()">시작</button><br>
+<!-- <button type="button" onclick="popup()">팝업</button><br> -->
+
+<!-- <a href = "javascript:popup()" target = "_blank">팝업</a> -->
+
+</div>
+
+
+</body>
+</html>

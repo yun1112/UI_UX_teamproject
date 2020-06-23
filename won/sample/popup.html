@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>popup 예제</title>
+    
+    <script>
+        function popup(){
+            var url = "popup.html";
+            var name = "popup test";
+            var option = "width = 500, height = 500, top = 100, left = 200, location = no"
+            window.open(url, name, option);
+        }
+    </script>
+</head>
+<body>
+    <!-- <a href = "javascript:popup()" target = "_blank">팝업</a> -->
+    <h1>메뉴 상세</h1>
+    <h2>메뉴 선택</h2>
+    <table>
+        <tr>
+            <td colspan="2"><img src="icon1.png"></td>
+        </tr>
+        <tr>
+            <td><img src="icon1.png"><br><input class="chk" type="checkbox"><button type="button" onclick="popup()">상세보기</button><br></td>
+            <td><img src="icon1.png"><br><input class="chk" type="checkbox"><button type="button" onclick="popup()">상세보기</button><br></td>
+        </tr>
+</body>
+</html>
