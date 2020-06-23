@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 50px;
+        }
+    </style>
+        <script>
+            var pay = function () {
+    
+                var yesOrNo = confirm("결제하시겠습니까?");
+                if (yesOrNo == true) {
+                    location.href = "index4.html";
+                } else if (yesOrNo == false) {
+    
+                }
+            }
+        </script>
+</head>
+
+<body>
+    <h2>결제 메뉴 확인</h2>
+    <table>
+        <tr>
+            <td><img src="icon1.png"></td>
+        </tr>
+        <tr>
+            <td><img src="icon1.png"></td>
+        </tr>
+        <tr>
+            <td><img src="icon1.png"></td>
+        </tr>
+        <tr>
+            <td>
+                <!-- history.back() : 이전 페이지로 돌아가는 함수 -->
+                <input type="button" value="이전" onclick="history.back()">
+                <!-- history.forward() : 페이지 앞으로 가기(갔던 페이지 없을 경우 변화없음) -->
+                <!-- <input type="button" value="진행" onclick="history.forward()"> -->
+                <input type="button" value="결제" onclick="pay(), history.forward()"></td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>
