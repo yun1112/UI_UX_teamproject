@@ -10,6 +10,7 @@
         * {
             margin: 0px;
             padding: 0px;
+            
         }
 
         #container {
@@ -71,9 +72,9 @@
         }
 /*  장바구니 div*/
         #cart{
-            /* border: 1px solid purple; */
-            position:absolute;
-
+            border: 1px solid purple;
+            /* position:absolute; */
+            height: 200px;
         }
         #btns{
             /* border: 1px solid purple; */
@@ -149,6 +150,11 @@ img{
             text-align:left;
             padding-left: 20px;
         }
+        li {
+            margin: 0;
+            border: 0;
+            float: left;
+        }
     </style>
 <!-- +버튼 누르면 상세주문화면 팝업창이 아닌 div로 띄움 -->
     <!-- <script type="text/javascript" src="menu_popup.js"></script> -->
@@ -182,6 +188,8 @@ img{
             document.getElementById('details').style.display='none';
             return false;
         }
+
+        var checkedItems = [];
 
         function checkAll(){
 
