@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #container {
+            border: 1px solid black;
+
+            width: 360px;
+            height: 600px;
+            /* width:200px;
+        height:300px; */
+            text-align: center;
+            position: relative;
+            /* z-index: 0; */
+        }
+
+        /* #div1 {
+            border: 1px solid black;
+            height: 70%;
+            /* margin:50%; }*/
+        #header{
+            position:absolute;
+            width:100px;
+            /* text-align:center; */
+            left:120px;
+            top:20px;
+            font-size:1.5em;
+        }
+/* 메뉴 표시할 div */
+        #div1{
+            /* border: 1px solid red; */
+            /* left:80px; */
+            top:100px;
+            width:360px;
+            height:300px;
+            position:absolute;
+        }
+
+        #div2{
+            width:360px;
+            height:100px;
+            /* border: 2px solid cyan; */
+
+            /* left:50px; */
+            /* bottom:50px;s */
+            position: absolute;
+            bottom:200px;
+        }
+        #btns{
+            left:100px;
+            /* border: 1px solid purple; */
+            right:20px;
+            position: absolute;
+            /* float:right; */
+            margin:5px 20px;
+            width:100px;
+            padding:20px;
+        }
+
+        button {
+            left: 125px;
+            top: 50px;
+            /* width:100px;
+        height:40px;
+        margin:100px 0; */
+            /* margin: 0 180px; */
+            /* position: absolute; */
+            width: 20px;
+            height:12px;
+            text-align:center;
+
+        }
+   
+        image {
+            /* width:1.2em; */
+            left: 150px;
+            top: 200px;
+            /* margin:50%; */
+            /* position: absolute; */
+            /* border: 1px solid red; */
+            /* margin:200px 150px; */
+            /* width:50%; */
+            /* margin:50%; */
+        }
+
+        /* #div2 {
+            border: 1px solid blue;
+            position: absolute;
+        } */
+
+        .options{
+            margin:5px;
+        }
+
+        /*     
+        img {
+            width: 50px;
+        }
+        button{
+            font-size:0.5em;
+        } */
+
+
+        /* #details{
+            background-color: darkcyan;
+            width:200px;
+            height:300px;
+            position:absolute;
+            /* z-index: 1; */
+            /*left:80px;
+            top:80px;
+            border: 2px solid darkblue;
+            display:none;
+            text-align:center;
+        } */
+        ul{
+            list-style:none;
+            text-align:left;
+            padding-left: 20px;
+        }
+        explanation{
+            float:right;
+            border:2px solid rebeccapurple;
+        }
+        chk_n_img{
+            float:left;
+        }
+        img{
+            width:50px;
+        }
+    </style>
+<!-- +버튼 누르면 상세주문화면 팝업창이 아닌 div로 띄움 -->
+    <!-- <script type="text/javascript" src="menu_popup.js"></script> -->
+    <!-- <script type="text/javascript" src="menu_popup.html"></script> -->
+    <script>
+        var pay = function () {
+
+            var yesOrNo = confirm("결제하시겠습니까?");
+            if (yesOrNo == true) {
+                location.href = "index4.html";
+            } else if (yesOrNo == false) {
+
+            }
+        }
+
+
+        
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header"><h2>Order</h2></div>
+    
+        <div id="div1">
+            <!-- 주문 내역 리스트 형식으로 뜨도록 -->
+    <!-- <table id="menus"> -->
+        <ul id="menus">
+            <li>
+                <div id="chk_n_img">
+                <input class="chk options" type="checkbox"><img class="options" src="images/cookie_monster2.jpg"></div>
+                <div id="explanation">
+                    <p>메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명</p></div>
+                </li>
+            <li>
+                <div id="chk_n_img">
+                <input class="chk options" type="checkbox"><img class="options" src="images/cookie_monster2.jpg"></div>
+                <div id="explanation">
+                    <p>메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명 메뉴설명</p></div>
+                </li>
+                </ul>
+            </div>  </div>
+        </div>
+        <div id="div2">
+                <!-- history.back() : 이전 페이지로 돌아가는 함수 -->
+                <!-- 이전 버튼 대신에 일괄주문선택버튼 -->
+                <div id="btns">
+                <input type="button" value="취소" onclick="history.back()">
+                <!-- history.forward() : 페이지 앞으로 가기(갔던 페이지 없을 경우 변화없음) -->
+                <!-- <input type="button" value="진행" onclick="history.forward()"> -->
+                <input type="button" value="결제" onclick="pay(), history.forward()"></div>
+            </div>  
+    </div>
+</body>
+
+</html>
