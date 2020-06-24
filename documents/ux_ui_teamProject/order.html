@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+    <style>
+        #content{ 
+    background:#d1d1d1; 
+    transition: .3s; 
+    height:0px; 
+    overflow:hidden; 
+    } 
+    </style>
+</head>
+<body>
+    <h4>Order</h4>
+    ----------------------------------------------<br>
+    주문번호<br>
+    총 결제금액<br>
+    결제수단<br>
+    ----------------------------------------------<br>
+    <div class = "주문내역">
+        [주문내역]
+    </div>
+    ----------------------------------------------<br>
+
+    <button class="button">확인</button>
+</body>
+<script> 
+    $('#check').click(function(){ 
+      if(this.checked==true){ 
+        $('#content').css('height','300px'); 
+        }else{ 
+        $('#content').css('height','0px'); 
+     } 
+    }); 
+    </script>
+</html>

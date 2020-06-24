@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+    <style>
+         #content{ 
+    background:#d1d1d1; 
+    transition: .3s; 
+    height:0px; 
+    overflow:hidden; 
+    } 
+    </style>
+</head>
+<body>
+    <h4>Menu</h4>
+    --------------------------------------------------<br>
+    <div id = va>
+        <img src = "../images/p-바닐라1.PNG" height="70"><br>
+        <input type='checkbox' id='check'>
+        <div id='content'>상세보기</div>
+        <button class="추가">+</button>
+    </div>
+    <div id = va>
+        <img src = "../images/p-딸기1.PNG" height="70"><br>
+        <input type='checkbox' id='check'>
+        <div id='content'>상세보기</div>
+        <button class="추가">+</button>
+    </div>
+    <div id = va>
+        <img src = "../images/p-망고1.PNG" height="70"><br>
+        <input type='checkbox' id='check'>
+        <div id='content'>상세보기</div>
+        <button class="추가">+</button>
+    </div>
+    <div id = va>
+        <img src = "../images/p-녹차1.PNG" height="70"><br>
+        <input type='checkbox' id='check'>
+        <div id='content'>상세보기</div>
+        <button class="추가">+</button>
+    </div>
+    <div id = va>
+        <img src = "../images/p-체리1 .PNG" height="70"><br>
+        <input type='checkbox' id='check'>
+        <div id='content'>상세보기</div>
+        <button class="추가">+</button>
+    </div>
+    <div id = va>
+        <img src = "../images/p-초콜릿1.PNG" height="70"><br>
+        <input type='checkbox' id='check'>
+        <div id='content'>상세보기</div>
+        <button class="추가">+</button>
+    </div>
+    <div id = va>
+        <img src = "../images/p-카라멜1.PNG" height="70"><br>
+        <input type='checkbox' id='check'>
+        <div id='content'>상세보기</div>
+        <button class="추가">+</button>
+    </div>
+    --------------------------------------------------<br>
+    장바구니 기능 그게 뭔데,, 그거 어떻게 하는건데,,,
+    <button class="결제">결제</button>
+</body>
+<script> 
+    $('#check').click(function(){ 
+      if(this.checked==true){ 
+        $('#content').css('height','300px'); 
+        }else{ 
+        $('#content').css('height','0px'); 
+     } 
+    }); 
+    </script>
+</html>
