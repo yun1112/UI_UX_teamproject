@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover이미지 체인지</title>
+
+    <style>
+
+        #imglist img{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+
+            top: 30%;
+            left: 30%;
+        }
+      
+    </style>
+</head>
+<body>
+  
+    <!-- 마우스 갔을때 그냥 바뀌는거
+    1번>>2번>>3번>> 2번>> 3번>> 2번>> 3번 이렇게 바뀜 -->
+    <div id="imglist">
+        <img src="../yang/uiux_team/teamimg/p-체리1 .PNG"
+        onmouseover="this.src='../yang/uiux_team/teamimg/gv40000021060_1.jpg'"
+        onmouseout="this.src='../yang/uiux_team/teamimg/n-녹차가맛있는우유1.png'">
+        </div>
+        
+</body>
+</html>
