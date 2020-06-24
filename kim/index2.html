@@ -10,6 +10,7 @@
         * {
             margin: 0px;
             padding: 0px;
+            
         }
 
         #container {
@@ -29,11 +30,25 @@
             height: 70%;
             /* margin:50%; }*/
         #header{
+            background-color: lightpink;
             position:absolute;
-            width:100px;
+            width:360px;
+
             /* text-align:center; */
-            left:120px;
+            left:0px;
             top:20px;
+            font-size:1.5em;
+        }
+        #headerB{
+            background-color: lightpink;
+            position:absolute;
+            width:360px;
+            height: 75px;
+            display: inline-block;
+            /* text-align:center; */
+            vertical-align: middle;
+            left:0px;
+            top:px;
             font-size:1.5em;
         }
 /* 메뉴 표시할 div */
@@ -57,9 +72,9 @@
         }
 /*  장바구니 div*/
         #cart{
-            /* border: 1px solid purple; */
-            position:absolute;
-
+            border: 1px solid purple;
+            /* position:absolute; */
+            height: 200px;
         }
         #btns{
             /* border: 1px solid purple; */
@@ -135,6 +150,11 @@ img{
             text-align:left;
             padding-left: 20px;
         }
+        li {
+            margin: 0;
+            border: 0;
+            float: left;
+        }
     </style>
 <!-- +버튼 누르면 상세주문화면 팝업창이 아닌 div로 띄움 -->
     <!-- <script type="text/javascript" src="menu_popup.js"></script> -->
@@ -169,6 +189,8 @@ img{
             return false;
         }
 
+        var checkedItems = [];
+
         function checkAll(){
 
         }
@@ -180,8 +202,13 @@ img{
 <body>
     
     <div id="container">
+<<<<<<< HEAD
         
         <div id="header" style="font-size: 24px; color: black; font-family: 'Times New Roman'">Menu</div>
+=======
+        <div id="headerB"></div>
+        <div id="header" style="font-size: 30px; color: black; font-family: 'Times New Roman'">Menu</div>
+>>>>>>> 81d10bb7a7d8774de6586c434b20fcdda87129dc
     
         <div id="div1">
     <table id="menus">
@@ -223,7 +250,7 @@ img{
     <!-- 상세주문화면 div -->
     <div id="details">
         <div>
-        <img class="options" src="icon1.png">
+        <img class="options" src="images/soft-red-star-template.png">
     </div>
     <form id="toppings" action="#" method="get">
         <div>
