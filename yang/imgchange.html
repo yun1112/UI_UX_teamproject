@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <!-- 이미지가 차례대로 움직인다!!! -->
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img 체인지</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            
+            $('#imglist').hover(function(){
+
+                setInterval(function(){
+                    $('#imglist>img').first().appendTo('#imglist');
+                },2000);
+            });
+            // $('img').click(function(){
+
+            //     setInterval(function(){
+            //         $('#imglist>img').first().appendTo('#imglist');
+            //     },1000);
+            // });
+        });
+    </script>
+
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #imglist{
+            width: 100px;
+            height: 100px;
+            padding: 0px;
+
+            overflow: hidden;
+        }
+
+        #imglist>img{
+            display: block;
+
+            width: 100px;
+            height: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="imglist"> 
+        <img src="uiux_team/teamimg/gv40000021060_1.jpg">
+        <img src="uiux_team/teamimg/p-체리1 .PNG">
+        <img src="uiux_team/teamimg/n-녹차가맛있는우유3.png">
+
+    </div>
+    
+</body>
+</html>
