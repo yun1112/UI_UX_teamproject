@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-truu</title>        
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="./js/btruu.js"></script>
+    <link rel="stylesheet" href="./css/btruu.css" type="text/css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: '맑은고딕', cursive;
+
+        }
+
+        #container {
+            border: 1px solid black;
+
+            width: 360px;
+            height: 600px;
+            /* width:200px;
+        height:300px; */
+            text-align: center;
+            position: relative;
+            /* z-index: 0; */
+        }
+
+        #header {
+            position: absolute;
+            width: 100px;
+            /* text-align:center; */
+            left: 120px;
+            top: 20px;
+            font-size: 1.5em;
+        }
+
+        /* 메뉴 표시할 div */
+        #menus {
+            border: 1px solid red;
+            left: 50px;
+            top: 100px;
+            position: absolute;
+        }
+
+        /* 장바구니 표시할 div */
+        #div2 {
+            width: 360px;
+            height: 250px;
+            border: 2px solid cyan;
+
+            /* left:50px; */
+            /* bottom:50px;s */
+            position: absolute;
+            bottom: 5px;
+        }
+
+        /*  장바구니 div*/
+        #cart {
+            border: 1px solid purple;
+            /* position:absolute; */
+            height: 200px;
+        }
+
+        /* #btns {
+            
+            right: 20px;
+            position: absolute;
+            
+        } 
+        */
+
+        hr {
+            position: absolute;
+        }
+
+        image {
+            /* width:1.2em; */
+            left: 150px;
+            top: 200px;
+            /* margin:50%; */
+            /* position: absolute; */
+            /* border: 1px solid red; */
+            /* margin:200px 150px; */
+            /* width:50%; */
+            /* margin:50%; */
+        }
+
+        /* #div2 {
+            border: 1px solid blue;
+            position: absolute;
+        } */
+
+        button {
+            left: 125px;
+            top: 50px;
+            /* width:100px;
+        height:40px;
+        margin:100px 0; */
+            /* margin: 0 180px; */
+            /* position: absolute; */
+            width: 10px;
+            height: 12px;
+            text-align: center;
+
+        }
+
+        .options {
+            margin: 5px;
+        }
+
+        /*     
+        img {
+            width: 50px;
+        }
+        button{
+            font-size:0.5em;
+        } */
+        /* 
+img{
+    width:50px;
+} */
+        img {
+            width: 50px;
+        }
+
+        #details {
+            background-color: darkcyan;
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            /* z-index: 1; */
+            left: 80px;
+            top: 80px;
+            border: 2px solid darkblue;
+            display: none;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            text-align: left;
+            padding-left: 20px;
+            font-size: 1em;
+            color: blue;
+        }
+
+        li {
+            margin: 0;
+            border: 0;
+            float: left;
+        }
+    </style>
+    <!-- +버튼 누르면 상세주문화면 팝업창이 아닌 div로 띄움 -->
+    <!-- <script type="text/javascript" src="menu_popup.js"></script> -->
+    <!-- <script type="text/javascript" src="menu_popup.html"></script> -->
+    <script>
+        var pay = function () {
+
+            var yesOrNo = confirm("결제하시겠습니까?");
+            if (yesOrNo == true) {
+                location.href = "index3.html";
+            } else if (yesOrNo == false) {
+
+            }
+        }
+
+        //상세주문화면 div 출력
+        function popup() {
+            // var details_html='';
+            // details_html+='<div>'
+
+            // document.getElementById('details').style.display='none';
+            document.getElementById('details').style.display = 'block';
+            return false;
+        }
+
+        function close2() {
+            // var details_html='';
+            // details_html+='<div>'
+
+            // document.getElementById('details').style.display='none';
+            // alert('click');
+            document.getElementById('details').style.display = 'none';
+            return false;
+        }
+
+        var checkedItems = [];
+
+        function checkAll() {
+            //checkedItems배열에 선택한 항목 추가
+            // checkedItems.push(document.getElementsByClassName('chk'));
+            var temp = document.getElementsByClassName('#chk');
+            alert(temp);
+        }
+
+        function fn_AllCheck(checkboxName, parantsObj) {
+            var obj = document.getElementsByName(checkboxName);
+            if (parantsObj.checked) {
+                for (var i = 0; i < obj.length; i++) {
+                    obj[i].checked = true;
+                }
+            } else {
+                for (var i = 0; i < obj.length; i++) {
+                    obj[i].checked = false;
+                }
+            }
+        }
+
+        function fn_ChildCheck(thisChkBox, parantsObj, childName) {
+            var cnt = 0;
+            var parantsChkBox = document.getElementById(parantsObj);
+            var childChkBox = document.getElementsByName(childName);
+            if (thisChkBox.checked) {
+                parantsChkBox.checked = true;
+            } else {
+                for (var i = 0; i < childChkBox.length; i++) {
+                    if (childChkBox[i].checked == true)
+                        cnt++;
+                }
+                if (cnt == 0) parantsChkBox.checked = false;
+            }
+        }
+
+        function addItemsToCart(thisChkBox, childName) {
+            var cnt = 0;
+            // var checkedItems = document.getElementsByName(childName);
+            
+            if (thisChkBox.checked) {
+                console.log(cnt++);
+                // $("#cart").appendTo('<h1>a</h1>');
+                // $("<h1>a</h1>".appendTo(".cart"));
+                var temp = document.createElement('li');
+                temp.innerHTML = '<h1>aaa</h1>';
+                // <img class="options" src="images/cookie_monster2.jpg">
+                temp.innerHTML = '<img class="options" src="images/cookie_monster2.jpg">';
+                document.getElementById('cart').append(temp);
+            }else{//체크 해제시 해당 항목 장바구니에서 삭제->배열에 체크한 항목들 저장하고 한꺼번에 출력->체크 해제시 페이지 리로드해서 변경사항 반영
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h2>Menu</h2>
+        </div>
+
+        <div id="div1">
+            <table id="menus">
+                <tr>
+                    <td><img class="options" src="images/cookie_monster2.jpg"><br><input id="chk1" type="checkbox"
+                            name="checkbox1"
+                            onclick="fn_ChildCheck(this,'parantsChkBox1', 'checkbox1');addItemsToCart(this,'checkbox1');">
+                        <button type="button" onclick="popup()">+</button><br></td>
+                    <td><img class="options" src="images/cookie_monster2.jpg"><br><input id="chk1" type="checkbox"
+                            name="checkbox1"
+                            onclick="fn_ChildCheck(this,'parantsChkBox1', 'checkbox1');addItemsToCart(this,'checkbox1');">
+                        <button type="button" onclick="popup()">+</button><br></td>
+                    <td><img class="options" src="images/cookie_monster2.jpg"><br><input id="chk1" type="checkbox"
+                            name="checkbox1"
+                            onclick="fn_ChildCheck(this,'parantsChkBox1', 'checkbox1');addItemsToCart(this,'checkbox1');">
+                        <button type="button" onclick="popup()">+</button><br></td>
+                    <td><img class="options" src="images/cookie_monster2.jpg"><br><input id="chk1" type="checkbox"
+                            name="checkbox1"
+                            onclick="fn_ChildCheck(this,'parantsChkBox1', 'checkbox1');addItemsToCart(this,'checkbox1');">
+                        <button type="button" onclick="popup()">+</button><br></td>
+                </tr>
+                <tr>
+                    <td><img class="options" src="images/cookie_monster2.jpg"><br><input id="chk1" type="checkbox"
+                            name="checkbox1"
+                            onclick="fn_ChildCheck(this,'parantsChkBox1', 'checkbox1');addItemsToCart(this,'checkbox1');">
+                        <button type="button" onclick="popup()">+</button><br></td>
+                    <td><img class="options" src="images/cookie_monster2.jpg"><br><input id="chk1" type="checkbox"
+                            name="checkbox1"
+                            onclick="fn_ChildCheck(this,'parantsChkBox1', 'checkbox1');addItemsToCart(this,'checkbox1');">
+                        <button type="button" onclick="popup()">+</button><br></td>
+                    <td><img class="options" src="images/cookie_monster2.jpg"><br><input id="chk1" type="checkbox"
+                            name="checkbox1"
+                            onclick="fn_ChildCheck(this,'parantsChkBox1', 'checkbox1');addItemsToCart(this,'checkbox1');">
+                        <button type="button" onclick="popup()">+</button><br></td>
+                    <td><img class="options" src="images/cookie_monster2.jpg"><br><input id="chk1" type="checkbox"
+                            name="checkbox1"
+                            onclick="fn_ChildCheck(this,'parantsChkBox1', 'checkbox1');addItemsToCart(this,'checkbox1');">
+                        <button type="button" onclick="popup()">+</button><br></td>
+                </tr>
+
+
+                <!-- <td><img class="options" src="images/cookie_monster2.jpg"><br><input class="chk options"
+                            type="checkbox"><button type="button" onclick="popup()">+</button><br></td> -->
+            </table>
+        </div>
+        <!-- <hr> -->
+        <div id="div2">
+            <!-- 장바구니 div -->
+            <!-- <div id="cart"> -->
+            <div>
+                <ul id="cart">
+
+                </ul>
+            </div>
+            <!-- history.back() : 이전 페이지로 돌아가는 함수 -->
+            <!-- 이전 버튼 대신에 일괄주문선택버튼 -->
+            <div id="btns"></div>
+            <!-- <input type="button" value="일괄선택" onclick="checkAll()"> -->
+            <!-- <input type="checkbox" class="chk" value="" onchange="allCheckedBox(this)"> -->
+            <!-- <input type="button" value="일괄선택" onclick="history.back()"> -->
+            <!-- history.forward() : 페이지 앞으로 가기(갔던 페이지 없을 경우 변화없음) -->
+            <!-- <input type="button" value="진행" onclick="history.forward()"> -->
+            <input type="checkbox" id="parantsChkBox1" onclick="fn_AllCheck('checkbox1', this);">
+            <button class="btnStyle1" type="button" onclick="goPage('orderlist.html')">결제</button>
+            <!-- 부모 CheckBox -->
+
+
+
+        </div>
+    </div>
+    </div>
+
+
+    <!-- 상세주문화면 div -->
+    <div id="details">
+        <div>
+            <img class="options" src="icon1.png">
+        </div>
+        <form id="toppings" action="#" method="get">
+            <div>
+                <h3>토핑추가</h3>
+                <ul>
+                    <li><input type="checkbox" class="options_chk">씨리얼</li>
+                    <li><input type="checkbox" class="options_chk">초코칩</li>
+                    <li><input type="checkbox" class="options_chk">견과류</li>
+                    <li><input type="checkbox" class="options_chk">코코넛 후레이크</li>
+                    <li><input type="checkbox" class="options_chk">오레오 후레이크</li>
+                </ul>
+
+                <!-- 확인버튼 누르면 상세내역 div 꺼지도록 수정할 것 -->
+                <input id="close" type="button" value="확인" onclick="close2()">
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
