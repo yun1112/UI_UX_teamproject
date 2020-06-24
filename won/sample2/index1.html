@@ -1,11 +1,7 @@
-
 <!-- * 페이지와 관련된 함수
 : 버튼을 만들어 클릭 시(onclick) 다양한 페이지로 이동할 수 있도록 만든 함수
-
 history.back() : 이전 페이지로 돌아가는 함수
-
 location.reload() : 현재 페이지를 refresh
-
 history.forward() :  페이지 앞으로 가기 (갔던 페이지 없을 경우 변화 없음)  -->
 
 
@@ -17,23 +13,19 @@ history.forward() :  페이지 앞으로 가기 (갔던 페이지 없을 경우 
 </head>
 <body>
 	
-
 	* 링크로 이동가능한 태그
 	<a href="링크">
 	<form> ==> submit
 	* 자바스크립트에서 링크 이동하기
  -->
 <!-- <h1>main</h1>
-
 <a href="index2.html">index2.html로 이동</a> 
-
 <script type="text/javascript">
 // 자바스크립트에서 배경 컬러바꾸기
 document.bgColor = "#ff0000"; -->
 
 
 <!-- </script>
-
 </body>
 </html>  -->
 
@@ -59,27 +51,28 @@ document.bgColor = "#ff0000"; -->
         position:relative;
     }
     #div1{
-        border:1px solid black;
+        /* border:1px solid black; */
         height:70%;
         /* margin:50%; */
     }
     #mainImg{
-        left:150px;
-        top:200px;
+        left:25px;
+        top:20px;
         /* margin:50%; */
         position:absolute;
-        border:1px solid red;
+        /* border:1px solid red; */
         /* margin:200px 150px; */
         /* width:50%; */
         /* margin:50%; */
+        width:300px;
     }
     #div2{
-        border:1px solid blue;
+        /* border:1px solid blue; */
         position:absolute;
     }
     #btn{
         left:125px;
-        top:50px;
+        top:100px;
         /* width:100px;
         height:40px;
         margin:100px 0; */
@@ -120,7 +113,7 @@ document.bgColor = "#ff0000"; -->
 
 <div id="container">
     <div id="div1">
-        <img id="mainImg" src="icon1.png">
+        <img id="mainImg" src="images/cookie_monster2.jpg">
     </div>
     <div id="div2">
 <button id="btn" type="button" onclick="gopage()">시작</button></div>
