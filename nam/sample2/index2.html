@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B-truu</title>        
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="./js/btruu.js"></script>
-    <link rel="stylesheet" href="./css/btruu.css" type="text/css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <!-- <script src="jquery.js"></script> -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <style>
         * {
             margin: 0px;
             padding: 0px;
-            font-family: '맑은고딕', cursive;
+            font-family: 'Gaegu', cursive;
 
         }
 
@@ -28,6 +28,15 @@
             /* z-index: 0; */
         }
 
+        /*  #div1{
+            height:200px;
+            border:1px solid grey;
+        } */
+
+        /* #div1 {
+            border: 1px solid black;
+            height: 70%;
+            /* margin:50%; }*/
         #header {
             position: absolute;
             width: 100px;
@@ -64,13 +73,12 @@
             height: 200px;
         }
 
-        /* #btns {
-            
+        #btns {
+            /* border: 1px solid purple; */
             right: 20px;
             position: absolute;
-            
-        } 
-        */
+            /* float:right; */
+        }
 
         hr {
             position: absolute;
@@ -312,7 +320,7 @@ img{
             <!-- history.forward() : 페이지 앞으로 가기(갔던 페이지 없을 경우 변화없음) -->
             <!-- <input type="button" value="진행" onclick="history.forward()"> -->
             <input type="checkbox" id="parantsChkBox1" onclick="fn_AllCheck('checkbox1', this);">
-            <button class="btnStyle1" type="button" onclick="goPage('orderlist.html')">결제</button>
+            <input type="button" value="결제" onclick="pay(), history.forward()">
             <!-- 부모 CheckBox -->
 
 
