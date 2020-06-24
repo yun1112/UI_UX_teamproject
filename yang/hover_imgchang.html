@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,6 +46,46 @@
         onmouseover="this.src='../uiux_team/teamimg/gv40000021060_1.jpg'"
         onmouseout="this.src='../uiux_team/teamimg/n-녹차가맛있는우유1.png'">
         </div>
+=======
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hover이미지 체인지</title>
+    
+        <style>
+            #imglist img{ 
+                /* 이미지의 크기 */
+                width: 100px;
+                height: 100px;
+    
+                /* 고정값 기준이미지를 대상으로 위치 지정이 가능하다. 
+                고정값을 빼면 이미지 위에 다른 이미지가아닌 이미지 옆에 이미지가 생긴다.*/
+                position: absolute;
+            }
+    
+            /* @2번의 이미지가 투명도가 0이기때문에 1번이미지만 보임
+               @이미지가 바뀔때 걸리는 시간이 1초(1s)가 걸린다. 
+                숫자의 값을 올리면 더 천천히 바뀌게된다.*/
+            #imglist>#test02 {                 
+                opacity: 0;
+                transition: opacity 1s
+            }
+    
+            /*@마우스가 올라갔을때(hover) 2번의 투명도를 올려 잘보이게 해주어 
+               1번이미지가 아닌 2번 이미지가 보이게됨
+              @투명도는 0~1까지 설정할수있음.*/
+            #imglist:hover>#test02 {
+                opacity: 1;
+            }
+        </style>
+    </head>
+<body>
+    <!-- 스르르 바뀌는거 -->
+    <div id="imglist">
+        <img id="test01" src="uiux_team/teamimg/n-정열의훌라망고1.png">
+        <img id="test02" src='uiux_team/teamimg/gv40000021060_1.jpg'>
+    </div>
+>>>>>>> 81d10bb7a7d8774de6586c434b20fcdda87129dc
         
 </body>
 </html>
