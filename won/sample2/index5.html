@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 50px;
+        }
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+    
+            #container {
+                border: 1px solid black;
+    
+                width: 360px;
+                height: 600px;
+                /* width:200px;
+            height:300px; */
+                text-align: center;
+                position: relative;
+                /* z-index: 0; */
+            }
+    
+            /* #div1 {
+                border: 1px solid black;
+                height: 70%;
+                /* margin:50%; }*/
+            #header{
+                position:absolute;
+                width:100px;
+                /* text-align:center; */
+                left:120px;
+                top:20px;
+                font-size:1.5em;
+            }
+    /* 메뉴 표시할 div */
+            #div1{
+                border: 1px solid red;
+                /* left:80px; */
+                top:100px;
+                width:360px;
+                height:300px;
+                position:absolute;
+            }
+    
+            #div2{
+                width:360px;
+                height:100px;
+                border: 2px solid cyan;
+    
+                /* left:50px; */
+                /* bottom:50px;s */
+                position: absolute;
+                bottom:50px;
+            }
+            #btns{
+                left:100px;
+                border: 1px solid purple;
+                right:20px;
+                position: absolute;
+                /* float:right; */
+                margin:5px 20px;
+                width:100px;
+                padding:20px;
+            }
+    
+            button {
+                left: 125px;
+                top: 50px;
+                /* width:100px;
+            height:40px;
+            margin:100px 0; */
+                /* margin: 0 180px; */
+                /* position: absolute; */
+                width: 20px;
+                height:12px;
+                text-align:center;
+    
+            }
+       
+            image {
+                /* width:1.2em; */
+                left: 150px;
+                top: 200px;
+                /* margin:50%; */
+                /* position: absolute; */
+                border: 1px solid red;
+                /* margin:200px 150px; */
+                /* width:50%; */
+                /* margin:50%; */
+            }
+    
+            /* #div2 {
+                border: 1px solid blue;
+                position: absolute;
+            } */
+    
+            .options{
+                margin:5px;
+            }
+    
+            /*     
+            img {
+                width: 50px;
+            }
+            button{
+                font-size:0.5em;
+            } */
+    
+    
+            /* #details{
+                background-color: darkcyan;
+                width:200px;
+                height:300px;
+                position:absolute;
+                /* z-index: 1; */
+                /*left:80px;
+                top:80px;
+                border: 2px solid darkblue;
+                display:none;
+                text-align:center;
+            } */
+            ul{
+                list-style:none;
+                text-align:left;
+                padding-left: 20px;
+            }
+            explanation{
+                float:right;
+                border:2px solid rebeccapurple;
+            }
+            chk_n_img{
+                float:left;
+            }
+            tb{
+                text-align:center;
+                width:120px;
+                height:200px;
+                margin:20px;
+                position: absolute;
+                border:2px solid blue;
+            }
+            #content{
+                width:120px;
+                height:200px;
+            }
+        </style>
+    <script>
+        var pay = function () {
+
+            var yesOrNo = confirm("결제하시겠습니까?");
+            if (yesOrNo == true) {
+                location.href = "index5.html";
+            } else if (yesOrNo == false) {
+
+            }
+        }
+
+    /*     setTimeout(function () {
+        console.log('메인페이지로 이동');
+        location.href = "index1.html";
+    }, 3000);
+    */
+   var i = 5;
+   alert('5초 후 메인페이지로 이동');
+   var interval = setInterval(function () {
+           document.getElementById('timer').innerHTML = '<h3>' + (i--) + '</h3>';
+           console.log(i);
+           // location.reload();
+           if (i == 0){
+               clearInterval(interval);
+               location.href = "index1.html";
+            }
+        },1000);
+        
+        
+    </script>
+</head>
+    <!-- 5초 후에 처음 페이지로 돌아감 -->
+
+<body>
+    <div id="container">
+    <div id="header">
+    <h2>결제 완료</h2></div>
+
+    <div id="div1">
+        <p id="timer"></p>
+    <img src="icon1.png"><br></div>
+    <!-- history.back() : 이전 페이지로 돌아가는 함수 -->
+    <div id="div2">
+    <input type="button" value="이전" onclick="history.back()">
+    <!-- history.forward() : 페이지 앞으로 가기(갔던 페이지 없을 경우 변화없음) -->
+    <!-- <input type="button" value="진행" onclick="history.forward()"> -->
+    <input type="button" value="결제" onclick="pay(), history.forward()">
+</div></div>
+</body>
+
+</html>
