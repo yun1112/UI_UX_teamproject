@@ -92,11 +92,28 @@
 }
 /*  장바구니 div*/
 #cart{
-  border-top: 1px solid purple;
-  /* position:absolute; */
+  border-top: 1px solid purple;  
   height: 110px;
-  width: 330px
+  width: 330px;  
+  /* overflow: scroll; */
+  overflow:auto; overflow-x:hidden
 }
+
+#cart::-webkit-scrollbar {
+  width: 10px;
+}
+#cart::-webkit-scrollbar-thumb {
+  background-color:white;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+#cart::-webkit-scrollbar-track {
+  background-color: lightpink;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px b#000000;
+}
+
 
 button {
   left: 125px;
@@ -145,6 +162,21 @@ li {
   margin: 0;
   border: 0;
   float: left;
+}
+
+.imgstyle {
+  height:55px;
+  width:55px;  
+  display: inline-block;    
+}
+
+.chartInput {
+  /* position: absolute;  */
+  height:55px;
+  width:55px;  
+  /* display: inline-block;
+  z-index: 1; */
+
 }
 
 .imgChange img{

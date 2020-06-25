@@ -53,44 +53,44 @@
             <tr>
             <td>
                 <br><br><br><br>녹차가<br>맛있는우유<br>2000원<br>
-                <input class="chk options" type="checkbox">
+                <input class="chk options" type="checkbox" name="checkbox1">
                 <button type="button" onclick="detailOrder()">+</button><br></td>
             <td>
                 <br><br><br><br>딸기딸기<br>대작전<br>2000원<br>
-                <input class="chk options" type="checkbox">
+                <input class="chk options" type="checkbox" name="checkbox2">
                 <button type="button" onclick="detailOrder()">+</button><br></td>
             <td>
                 <br><br><br><br>악동<br>쿠크무스<br>2000원<br>
-                <input class="chk options" type="checkbox">
+                <input class="chk options" type="checkbox" name="checkbox3">
                 <button type="button" onclick="detailOrder()">+</button><br></td>
             <td>
                 <br><br><br><br>치즈치즈<br>오렌지<br>2000원<br>
-                <input class="chk options" type="checkbox">
+                <input class="chk options" type="checkbox" name="checkbox4">
                 <button type="button" onclick="detailOrder()">+</button><br></td>
             </tr>
             <tr>
             <td>
                 <br><br><br><br><br>요거요거<br>블루베리<br>2000원<br>
-                <input class="chk options" type="checkbox">
+                <input class="chk options" type="checkbox" name="checkbox5">
                 <button type="button" onclick="detailOrder()">+</button><br></td>
             <td>
                 <br><br><br><br><br>정열의<br>훌라망고<br>2000원<br>
-                <input class="chk options" type="checkbox">
+                <input class="chk options" type="checkbox" name="checkbox6">
                 <button type="button" onclick="detailOrder()">+</button><br></td>
             <td>
                 <br><br><br><br><br>프렌치<br>아포가토<br>2000원<br>
-                <input class="chk options" type="checkbox">
+                <input class="chk options" type="checkbox" name="checkbox7">
                 <button type="button" onclick="detailOrder()">+</button><br></td>
             <td></td>
             </tr>   
             <tr><td colspan="4" height=50px align=right valign=bottom>
-                <input type="button" value="주문담기" onclick="history.back()">                
+                <input type="button" value="일괄선택" onclick="allCheck('checkbox');">
+                <input type="button" value="주문담기" onclick="addCheckedItemsToCart()">
                 </td></tr>     
         </table>
         </div>
         
-        <div id="divCart">
-            
+        <div id="divCart">            
             <div id="cart"></div>
                 <input type="button" value="   결     제   " onclick="goPage('orderlist.html')"></div>
             </div>  
@@ -119,5 +119,6 @@
 
     
 </body>
+
 
 </html>
