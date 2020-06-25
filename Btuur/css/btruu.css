@@ -173,7 +173,7 @@
 #receiptList{
   border: 0px solid purple;  
   height: 425px;
-  width: 280px;  
+  width: 300px;  
   /* overflow: scroll; */
   overflow:auto; overflow-x:hidden
   
