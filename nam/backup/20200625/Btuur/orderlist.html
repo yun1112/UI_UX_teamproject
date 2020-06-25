@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-truu</title>        
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="./js/btruu.js"></script>
+    <link rel="stylesheet" href="./css/btruu.css" type="text/css">
+
+<body>
+    
+    <div id="container">
+
+        <div id="headerB"></div>
+        <div id="header" style="font-size: 30px; color: black; font-family: 'Times New Roman'">Order List</div>
+        <!-- <div id="menuTable">
+            
+        </div> -->
+        
+        <div id="divOrderList">
+            
+            <div id="orders" class="receiptStyle"></div>
+            <br>
+                <input type="button" class="btnStyle" value="     Payment     " onclick="goPage('payment.html')">
+                <input type="button" class="btnStyle" value="     Cancel     " onclick="goPage('mainorder.html')">
+            
+        </div>
+    </div>
+
+    
+
+    
+</body>
+<script>
+    addOrderList();
+</script>
+
+</html>

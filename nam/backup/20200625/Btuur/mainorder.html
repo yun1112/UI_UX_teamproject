@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-truu</title>        
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- <script src="./js/btruu.js"></script> -->
+    <link rel="stylesheet" href="./css/btruu.css" type="text/css">
+ 
+</head>
+
+<body>
+    
+    <div id="container">
+
+        <div id="headerB"></div>
+        <div id="header" style="font-size: 30px; color: black; font-family: 'Times New Roman'">Menu</div>
+        <div id="menuTable">
+            <div class="imgChange">
+                <!-- <img class="options changeImg1"  style="z-index: 1;top:100px;left:60px;height:55px;width:55px;" src="images/1.1.PNG">
+                <img class="options changeImg2"  style="z-index: 1;top:100px;left:60px;height:55px;width:55px;" src="images/2.1.PNG"> -->
+                <img class="options changeImg1" style="top:100px;left:60px;" src="images/1.1.PNG">
+                <img class="options changeImg2" style="top:100px;left:60px;" src="images/2.1.PNG">
+            </div>
+            <div class="imgChange">
+                <img class="options changeImg1" style="top:100px;left:140px;" src="images/1.2.PNG">
+                <img class="options changeImg2" style="top:100px;left:140px;" src="images/2.2.PNG">
+            </div>
+            <div class="imgChange">
+                <img class="options changeImg1" style="top:100px;left:210px;" src="images/1.3.PNG">
+                <img class="options changeImg2" style="top:100px;left:210px;" src="images/2.3.PNG">
+            </div> 
+            <div class="imgChange">
+                <img class="options changeImg1" style="top:100px;left:280px;" src="images/1.4.PNG">
+                <img class="options changeImg2" style="top:100px;left:280px;" src="images/2.4.PNG">
+            </div> 
+            <div class="imgChange">
+                <img class="options changeImg1" style="top:250px;left:60px;" src="images/1.5.PNG">
+                <img class="options changeImg2" style="top:250px;left:60px;" src="images/2.5.PNG">
+            </div> 
+            <div class="imgChange">
+                <img class="options changeImg1" style="top:250px;left:140px;" src="images/1.6.PNG">
+                <img class="options changeImg2" style="top:250px;left:140px;" src="images/2.6.PNG">
+            </div> 
+            <div class="imgChange">
+                <img class="options changeImg1" style="top:250px;left:210px;" src="images/1.7.PNG">
+                <img class="options changeImg2" style="top:250px;left:210px;" src="images/2.7.PNG">
+            </div> 
+
+        <table id="mainMenuList" width=300 border=0 style="font-size: 12px; color: black; font-family: 'Times New Roman'">
+            <tr>
+            <td>
+                <br><br><br><br>녹차가<br>맛있는우유<br>2000원<br>
+                <input class="chk options" type="checkbox" name="checkbox1">
+                <button type="button" onclick="detailOrder(1)">+</button><br></td>
+            <td>
+                <br><br><br><br>딸기딸기<br>대작전<br>2000원<br>
+                <input class="chk options" type="checkbox" name="checkbox2">
+                <button type="button" onclick="detailOrder(2)">+</button><br></td>
+            <td>
+                <br><br><br><br>악동<br>쿠크무스<br>2000원<br>
+                <input class="chk options" type="checkbox" name="checkbox3">
+                <button type="button" onclick="detailOrder(3)">+</button><br></td>
+            <td>
+                <br><br><br><br>치즈치즈<br>오렌지<br>2000원<br>
+                <input class="chk options" type="checkbox" name="checkbox4">
+                <button type="button" onclick="detailOrder(4)">+</button><br></td>
+            </tr>
+            <tr>
+            <td>
+                <br><br><br><br><br>요거요거<br>블루베리<br>2000원<br>
+                <input class="chk options" type="checkbox" name="checkbox5">
+                <button type="button" onclick="detailOrder(5)">+</button><br></td>
+            <td>
+                <br><br><br><br><br>정열의<br>훌라망고<br>2000원<br>
+                <input class="chk options" type="checkbox" name="checkbox6">
+                <button type="button" onclick="detailOrder(6)">+</button><br></td>
+            <td>
+                <br><br><br><br><br>프렌치<br>아포가토<br>2000원<br>
+                <input class="chk options" type="checkbox" name="checkbox7">
+                <button type="button" onclick="detailOrder(7)">+</button><br></td>
+            <td></td>
+            </tr>   
+            <tr><td colspan="4" height=50px align=right valign=bottom>
+                <input type="button" class="btnStyle" value="   All   " onclick="allCheck('checkbox');">
+                <input type="button" class="btnStyle" value="  Add  " onclick="addCheckedItemsToCart()">
+                </td></tr>     
+        </table>
+        </div>
+        
+        <div id="divCart">            
+            <div id="cart"></div>
+                <input type="button" class="btnStyle" value="   Order   " onclick="goPage('orderlist.html')"></div>
+            </div>  
+        </div>
+    </div>
+
+    <!-- 상세주문화면 div -->
+    <div id="details">
+        <br>
+        <h3>Topping</h3>
+        
+            <br>
+        
+        <div id="detailOrderImg"></div>    
+        
+        
+    </div>
+
+    
+</body>
+
+<script src="./js/btruu.js"></script>
+<script>
+    initData();
+
+</script>
+
+</html>

@@ -1,0 +1,512 @@
+﻿
+* {
+    margin: 0 auto;
+    padding: 0px;
+}
+
+#tcontainer {
+    background-color: lightpink;
+    border: 1px solid black;            
+    
+    width: 360px;
+    height: 600px;
+
+    text-align: center;
+    position: relative;
+    transform:translateY(5%);            
+}
+
+#titleImage {
+    height: 70%;
+}
+
+#titleImg {
+    left: 25px;
+    top: 20px;
+    position: absolute;
+    width: 300px;
+}
+
+#titleImgD {
+    left: 20px;
+    top: 400px;
+
+    position: absolute;
+
+    width: 300px;
+}
+
+#titleBtn {            
+    position: absolute;
+}
+
+#container {
+  border: 1px solid black;
+
+  width: 360px;
+  height: 600px;
+  
+  text-align: center;
+  position: relative;
+  transform:translateY(5%);
+  /* z-index: 0; */
+}
+
+
+#header{
+  background-color: lightpink;
+  position:absolute;
+  width:360px;
+
+  /* text-align:center; */
+  left:0px;
+  top:20px;
+  font-size:1.5em;
+}
+#headerB{
+  background-color: lightpink;
+  position:absolute;
+  width:360px;
+  height: 75px;
+  display: inline-block;
+  /* text-align:center; */
+  vertical-align: middle;
+  left:0px;
+  top:px;
+  font-size:1.5em;
+}
+
+/* 메뉴 표시할 div */
+#mainMenuList{            
+  left:50px;
+  top:100px;
+  position:absolute;
+}
+
+/* 장바구니 표시할 div */
+#divCart{
+  width:360px;
+  height:140px;            
+  position: absolute;
+  bottom:5px;
+}
+/*  장바구니 div*/
+#cart{
+  border-top: 1px solid purple;  
+  height: 115px;
+  width: 330px;  
+  /* overflow: scroll; */
+  overflow:auto; overflow-x:hidden
+}
+
+#cart::-webkit-scrollbar {
+  width: 10px;
+}
+#cart::-webkit-scrollbar-thumb {
+  background-color:white;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+#cart::-webkit-scrollbar-track {
+  background-color: lightpink;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px b#000000;
+}
+
+
+#divOrderList{
+  width:360px;
+  height:500px;            
+  position: absolute;
+  bottom:5px;
+}
+/*  장바구니 div*/
+#orders{
+  border: 1px solid purple;  
+  height: 450px;
+  width: 330px;  
+  /* overflow: scroll; */
+  overflow:auto; overflow-x:hidden
+}
+
+#orders::-webkit-scrollbar {
+  width: 10px;
+}
+#orders::-webkit-scrollbar-thumb {
+  background-color:white;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+#orders::-webkit-scrollbar-track {
+  background-color: lightpink;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px b#000000;
+}
+
+
+#divReceiptList{
+  width:360px;
+  height:480px;            
+  position: absolute;
+  bottom:5px;
+}
+
+#receiptTitle{
+  border: 0px solid red;  
+  height: 40px;
+  width: 330px;  
+  /* overflow: scroll; */
+  overflow:auto; overflow-x:hidden
+}
+
+#receiptListBox{
+  border: 1px solid purple;  
+  height: 425px;
+  width: 330px;  
+  /* overflow: scroll; */
+  overflow:auto; overflow-x:hidden
+  
+}
+
+#receiptList{
+  border: 0px solid purple;  
+  height: 425px;
+  width: 300px;  
+  /* overflow: scroll; */
+  overflow:auto; overflow-x:hidden
+  
+}
+
+#receiptList::-webkit-scrollbar {
+  width: 10px;
+}
+#receiptList::-webkit-scrollbar-thumb {
+  background-color:white;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+#receiptList::-webkit-scrollbar-track {
+  background-color: lightpink;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px b#000000;
+}
+
+
+
+.options{
+  margin:5px;
+}
+
+#menuTable{
+  top:0;
+  left:50%;
+  margin-left :-200px;
+  position:absolute;
+}
+
+
+#details{
+             
+  top:150px;
+  left:50%;
+  margin-left :-125px;
+  
+  background-color:white;
+  width:250px;
+  height:300px;
+  position:absolute;
+  /* z-index: 1; */            
+  
+  border: 2px solid lightpink;
+  display:none;
+  text-align:center;
+  
+}
+
+
+/* #detailsInnerBox{
+             
+  top:200px;
+  left:50%;
+  margin-left :-125px;
+  
+  background-color:white;
+  width:250px;
+  height:350px;
+  position:absolute;
+  z-index: 5;
+  
+  border: 2px solid red;
+  display:none;
+  text-align:center;
+  
+} */
+
+ul{
+  margin: 0 auto;
+  list-style:none;
+  text-align:left;
+  padding-left: 20px;
+
+  list-style:none;
+  
+
+}
+li {
+  margin: 0;
+  border: 0;
+  float: left;
+
+  list-style:none;
+  
+
+
+}
+
+.imgstyle {
+  height:55px;
+  width:55px;  
+  display: inline-block;    
+}
+
+
+.imgstyleOrderList {
+  height:30px;
+  width:30px;  
+  display: inline-block;    
+}
+
+.chartInput {
+  /* position: absolute;  */
+  height:55px;
+  width:55px;  
+  /* display: inline-block;
+  z-index: 1; */
+
+}
+
+.imgChange img{
+  position: absolute;  
+  z-index: 1;
+  height:55px;
+  width:55px;      
+
+}
+.imgChange>.changeImg2 {                 
+      opacity: 0;
+      transition: opacity 1s
+  }
+
+  /*@마우스가 올라갔을때(hover) 2번의 투명도를 올려 잘보이게 해주어 
+     1번이미지가 아닌 2번 이미지가 보이게됨
+    @투명도는 0~1까지 설정할수있음.*/
+.imgChange:hover>.changeImg2 {
+  opacity: 1;
+}
+
+.receiptStyle {
+  font-size: 14px;
+  text-align: left;
+
+}
+
+
+
+.paymentBtnwrap {
+
+  position:absolute;
+  top:150px;
+  left:150px;
+}
+
+a {
+	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	display: block;
+	margin: 20px auto;
+	max-width: 180px;
+	text-decoration: none;
+	border-radius: 4px;
+	padding: 20px 30px;
+}
+
+a.pBtnCard {
+	color: whitesmoke; /*선택 안했을 시 글자*/
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 40px inset; /*선택 안했을 시 배경*/
+}
+
+a.pBtnCard:hover {
+	color: rgba(30, 22, 54, 0.7); /*선택시 글자*/
+	box-shadow: pink 0 0px 0px 40px inset; /*선택시 배경*/
+}
+
+a.pBtnPayCo {
+	color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+a.pBtnPayCo:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+
+button {
+  left: 125px;
+  top: 50px;            
+  width: 15px;
+  height:15px;
+  text-align:center;
+  
+
+}
+
+
+.btnStyle {
+  background-color: lavenderblush;
+  border-radius: 10px;
+  color : rgb(124, 6, 6);
+  border-color: rgb(189, 188, 188);
+}
+
+.btnStyle:hover
+ {
+  background-color: rgb(253, 204, 211);
+  border-radius: 10px;
+  color : rgb(124, 6, 6);
+}
+
+
+
+
+
+
+
+
+#startBtn {
+
+    left: 80px;
+    top: 60px;
+    position: absolute;
+    width: 200px;
+
+
+    background: gray;
+    color: whitesmoke;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+#startBtn:hover {
+    background: lavenderblush;
+    color: gray;
+}
+
+#startBtn:before,
+#startBtn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: gray;
+    transition: 400ms ease all;
+}
+
+#startBtn:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+#startBtn:hover:before,
+#startBtn:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+
+        .startBtn{
+            background:#1AAB8A;
+            color:#fff;
+            border:none;
+            position:relative;
+            height:60px;
+            font-size:0.8em;
+            padding:0 2em;
+            cursor:pointer;
+            transition:800ms ease all;
+            outline:none;
+          }
+          .startBtn:hover{
+            background:#fff;
+            color:#1AAB8A;
+          }
+          .startBtn:before,button:after{
+            content:'';
+            position:absolute;
+            top:0;
+            right:0;
+            height:2px;
+            width:0;
+            background: #1AAB8A;
+            transition:400ms ease all;
+          }
+          .startBtn:after{
+            right:inherit;
+            top:inherit;
+            left:0;
+            bottom:0;
+          }
+          .startBtn:hover:before,.startBtn:hover:after{
+            width:100%;
+            transition:800ms ease all;
+          }
+
+
+          .btnStyle1 {
+            -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+            -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+            -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+            -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+            transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+            display: block;
+            margin: 20px auto;
+            max-width: 180px;
+            text-decoration: none;
+            border-radius: 4px;
+            padding: 20px 30px;
+            color: rgba(30, 22, 54, 0.6);
+            box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+        }        
+        
+        
+        .btnStyle1:hover {
+            -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+            -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+            -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+            -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+            transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+            display: block;
+            margin: 20px auto;
+            max-width: 180px;
+            text-decoration: none;
+            border-radius: 4px;
+            padding: 20px 30px;
+            color: rgba(255, 255, 255, 0.85);
+            box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+        }

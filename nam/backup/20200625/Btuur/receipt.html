@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-truu</title>        
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="./js/btruu.js"></script>
+    <link rel="stylesheet" href="./css/btruu.css" type="text/css">
+
+<body>
+    
+    <div id="container">
+
+        <div id="headerB"></div>
+        <div id="header" style="font-size: 30px; color: black; font-family: 'Times New Roman'">Receipt</div>
+        <div id="menuTable">
+            <div style="position:absolute;top:80px;left:160px;">
+                <p style="text-align: center;" id="timer"></p>                
+                <a href="index.html"></a>
+            </div>
+        </div>
+        
+        <div id="divReceiptList">
+            
+            <div id="receiptTitle">[주 문 내 역]</div>
+            <div id="receiptListBox">
+            <div class="receiptStyle" id="receiptList"></div>
+            </div>
+                        
+        </div>
+    </div>
+
+    
+
+    
+</body>
+
+
+<script>
+    
+    addReceiptList();
+
+    var i = 5;
+    var interval = setInterval(function () {
+        document.getElementById('timer').innerHTML = '<h3>[ ' + (i--) + ' ]</h3>';
+        console.log(i);            
+        if (i == 0) {            
+            clearInterval(interval);
+            location.href = "index.html";
+        }
+    }, 1000);
+
+
+    btruuCart = [];
+    saveLocalStoragebyJSON();
+
+</script>
+
+</html>
