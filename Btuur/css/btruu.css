@@ -115,12 +115,93 @@
 }
 
 
+#divOrderList{
+  width:360px;
+  height:500px;            
+  position: absolute;
+  bottom:5px;
+}
+/*  장바구니 div*/
+#orders{
+  border: 1px solid purple;  
+  height: 450px;
+  width: 330px;  
+  /* overflow: scroll; */
+  overflow:auto; overflow-x:hidden
+}
+
+#orders::-webkit-scrollbar {
+  width: 10px;
+}
+#orders::-webkit-scrollbar-thumb {
+  background-color:white;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+#orders::-webkit-scrollbar-track {
+  background-color: lightpink;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px b#000000;
+}
+
+
+#divReceiptList{
+  width:360px;
+  height:480px;            
+  position: absolute;
+  bottom:5px;
+}
+
+#receiptTitle{
+  border: 0px solid red;  
+  height: 40px;
+  width: 330px;  
+  /* overflow: scroll; */
+  overflow:auto; overflow-x:hidden
+}
+
+#receiptListBox{
+  border: 1px solid purple;  
+  height: 425px;
+  width: 330px;  
+  /* overflow: scroll; */
+  overflow:auto; overflow-x:hidden
+  
+}
+
+#receiptList{
+  border: 0px solid purple;  
+  height: 425px;
+  width: 280px;  
+  /* overflow: scroll; */
+  overflow:auto; overflow-x:hidden
+  
+}
+
+#receiptListBox::-webkit-scrollbar {
+  width: 10px;
+}
+#receiptListBox::-webkit-scrollbar-thumb {
+  background-color:white;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+#receiptListBox::-webkit-scrollbar-track {
+  background-color: lightpink;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px b#000000;
+}
+
+
 button {
   left: 125px;
   top: 50px;            
   width: 10px;
   height:12px;
   text-align:center;
+  
 
 }
 .options{
@@ -141,7 +222,7 @@ button {
   left:50%;
   margin-left :-125px;
   
-  background-color:lavenderblush;
+  background-color:white;
   width:250px;
   height:350px;
   position:absolute;
@@ -152,21 +233,57 @@ button {
   text-align:center;
   
 }
+
+
+#detailsInnerBox{
+             
+  top:200px;
+  left:50%;
+  margin-left :-125px;
+  
+  background-color:white;
+  width:250px;
+  height:350px;
+  position:absolute;
+  z-index: 5;
+  
+  border: 2px solid red;
+  display:none;
+  text-align:center;
+  
+}
+
 ul{
   margin: 0 auto;
   list-style:none;
   text-align:left;
   padding-left: 20px;
+
+  list-style:none;
+  
+
 }
 li {
   margin: 0;
   border: 0;
   float: left;
+
+  list-style:none;
+  
+
+
 }
 
 .imgstyle {
   height:55px;
   width:55px;  
+  display: inline-block;    
+}
+
+
+.imgstyleOrderList {
+  height:30px;
+  width:30px;  
   display: inline-block;    
 }
 
@@ -198,19 +315,11 @@ li {
   opacity: 1;
 }
 
+.receiptStyle {
+  font-size: 14px;
+  text-align: left;
 
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -258,48 +367,16 @@ a.pBtnPayCo:hover {
 
 
 
+.btnStyle {
+  background-color: lightpink;
+  border-radius: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btnStyle:hover
+ {
+  background-color: lavenderblush;
+  border-radius: 10px;
+}
 
 
 
