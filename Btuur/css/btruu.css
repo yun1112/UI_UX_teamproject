@@ -93,7 +93,7 @@
 /*  장바구니 div*/
 #cart{
   border-top: 1px solid purple;  
-  height: 110px;
+  height: 115px;
   width: 330px;  
   /* overflow: scroll; */
   overflow:auto; overflow-x:hidden
@@ -179,31 +179,23 @@
   
 }
 
-#receiptListBox::-webkit-scrollbar {
+#receiptList::-webkit-scrollbar {
   width: 10px;
 }
-#receiptListBox::-webkit-scrollbar-thumb {
+#receiptList::-webkit-scrollbar-thumb {
   background-color:white;
   border-radius: 10px;
   background-clip: padding-box;
   border: 2px solid transparent;
 }
-#receiptListBox::-webkit-scrollbar-track {
+#receiptList::-webkit-scrollbar-track {
   background-color: lightpink;
   border-radius: 10px;
   box-shadow: inset 0px 0px 5px b#000000;
 }
 
 
-button {
-  left: 125px;
-  top: 50px;            
-  width: 10px;
-  height:12px;
-  text-align:center;
-  
 
-}
 .options{
   margin:5px;
 }
@@ -224,7 +216,7 @@ button {
   
   background-color:white;
   width:250px;
-  height:350px;
+  height:300px;
   position:absolute;
   /* z-index: 1; */            
   
@@ -235,7 +227,7 @@ button {
 }
 
 
-#detailsInnerBox{
+/* #detailsInnerBox{
              
   top:200px;
   left:50%;
@@ -251,7 +243,7 @@ button {
   display:none;
   text-align:center;
   
-}
+} */
 
 ul{
   margin: 0 auto;
@@ -365,17 +357,29 @@ a.pBtnPayCo:hover {
 }
 
 
+button {
+  left: 125px;
+  top: 50px;            
+  width: 15px;
+  height:15px;
+  text-align:center;
+  
+
+}
 
 
 .btnStyle {
-  background-color: lightpink;
+  background-color: lavenderblush;
   border-radius: 10px;
+  color : rgb(124, 6, 6);
+  border-color: rgb(189, 188, 188);
 }
 
 .btnStyle:hover
  {
-  background-color: lavenderblush;
+  background-color: rgb(253, 204, 211);
   border-radius: 10px;
+  color : rgb(124, 6, 6);
 }
 
 

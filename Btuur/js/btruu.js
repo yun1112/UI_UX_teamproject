@@ -84,8 +84,8 @@ function detailOrder(no) {
     get.innerHTML += '<br><input name="option3" type="checkbox" class="options_chk">견과류';
     
 
-    get.innerHTML += '<br><br><input type="button" value="확  인" onclick="detailOderClose(\'order\',' + no + ')">';
-    get.innerHTML += '     <input type="button" value="취  소" onclick="detailOderClose(\'\')">';
+    get.innerHTML += '<br><br><input type="button" class="btnStyle" value="   Select   " onclick="detailOderClose(\'order\',' + no + ')">';
+    get.innerHTML += '     <input type="button" class="btnStyle" value="   Cancel   " onclick="detailOderClose(\'\')">';
 
     console.log('detailOrder');
 
@@ -260,6 +260,7 @@ function addOrderList() {
     get.innerHTML = '<div>';
     for (var i = 0; i <= btruuCart.length - 1; i++) {
 
+        var sum=0;
         var optionReceipt="";
 
         if (btruuCart[i].option != 0) {
@@ -267,26 +268,31 @@ function addOrderList() {
 
             if (btruuCart[i].option & bitOption1) {
                 optionReceipt += "씨리얼 ";
+                sum+=500;
             }
 
             if (btruuCart[i].option & bitOption2) {
                 optionReceipt += "초코칩 ";
+                sum+=500;
             }
 
             if (btruuCart[i].option & bitOption3) {
                 optionReceipt += "견과류 ";
+                sum+=500;
             }
 
             optionReceipt += ")";
 
         }
 
+        sum+=(btruuCart[i].count*btruuCart[i].price);
         get.innerHTML += '<img class="imgstyleOrderList" src="./images/1.' + btruuCart[i].no + '.PNG">';
-        get.innerHTML += btruuCart[i].name + ' ';
+        get.innerHTML += '　' + btruuCart[i].name + ' ';
         get.innerHTML += ' ' + optionReceipt;
-        get.innerHTML += ' ' + btruuCart[i].count + ' ea ';
-        get.innerHTML += ' ' + btruuCart[i].price + '원<br>';
+        get.innerHTML += '<br>　　　　　　　　　x ' + btruuCart[i].count + 'ea';
+        get.innerHTML += ' : ' + sum + '원<br><hr width=80%; style="border: dashed 1px rgb(252, 173, 177);">';
     }
+     
     get.innerHTML += '</div>';
 
 
@@ -316,6 +322,8 @@ function addReceiptList() {
     var total=0;
     var sum=0;
 
+    get.innerHTML += '번호표 : 789 번<br><br><hr  style="border: dashed 1px rgb(252, 173, 177);"><br>';
+
     for (var i = 0; i <= btruuCart.length - 1; i++) {
 
         var optionReceipt="";
@@ -325,14 +333,17 @@ function addReceiptList() {
 
             if (btruuCart[i].option & bitOption1) {
                 optionReceipt += "씨리얼 ";
+                total += 500;
             }
 
             if (btruuCart[i].option & bitOption2) {
                 optionReceipt += "초코칩 ";
+                total += 500;
             }
 
             if (btruuCart[i].option & bitOption3) {
                 optionReceipt += "견과류 ";
+                total += 500;
             }
 
             optionReceipt += ")";
@@ -342,13 +353,12 @@ function addReceiptList() {
         sum = (btruuCart[i].price * btruuCart[i].count);
         get.innerHTML += btruuCart[i].name + ' ';
         get.innerHTML += ' ' + optionReceipt;
-        get.innerHTML += 'x ' + btruuCart[i].count + ' ea ';
+        get.innerHTML += '<br>　　　　　　　　　x ' + btruuCart[i].count + 'ea';        
         get.innerHTML += ': ' + sum + '원<br>';
         total += sum;
 
     }
-    get.innerHTML += '<br><hr><br>총 액 : '+total+'원 <br>';
-    get.innerHTML += '<br><hr><br>번호표 : 789 번 </div>';
+    get.innerHTML += '<br><hr  style="border: dashed 1px rgb(252, 173, 177);"><br><div>총 액 : '+total+'원<br><br>';
     get.innerHTML += '</div>';
 
 }
