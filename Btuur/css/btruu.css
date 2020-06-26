@@ -299,14 +299,16 @@ li {
       opacity: 0;
       transition: opacity 1s
   }
-
-  /*@마우스가 올라갔을때(hover) 2번의 투명도를 올려 잘보이게 해주어 
-     1번이미지가 아닌 2번 이미지가 보이게됨
-    @투명도는 0~1까지 설정할수있음.*/
+  
 .imgChange:hover>.changeImg2 {
   opacity: 1;
 }
 
+
+
+/*@마우스가 올라갔을때(hover) 2번의 투명도를 올려 잘보이게 해주어 
+     1번이미지가 아닌 2번 이미지가 보이게됨
+    @투명도는 0~1까지 설정할수있음.*/
 .receiptStyle {
   font-size: 14px;
   text-align: left;
