@@ -9,7 +9,7 @@ function Product(no, name, price, option, count) {
     this.option = option;
     this.count = count;
 }
-
+ 
 var ourProducts = [];
 var btruuCart = [];
 var bitOption1 = 1;
